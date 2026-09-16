@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Integrantes del Grupo de Investigación - FaCENA / UNNE</title>
+    <style>
+        :root {
+            --primary-color: #8b0000; /* Rojo institucional FaCENA */
+            --secondary-color: #1a2b4c; /* Azul FaCENA */
+            --accent-color: #d4af37; /* Dorado / Sol UNNE */
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --text-color: #333333;
+            --border-color: #e0e0e0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 950px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            overflow: hidden;
+        }
+
+        /* Header con logos y título */
+        header {
+            background-color: #ffffff;
+            border-bottom: 4px solid var(--primary-color);
+            padding: 30px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            height: 90px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .header-title {
+            flex: 1;
+            text-align: center;
+            min-width: 280px;
+        }
+
+        .header-title h1 {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            font-weight: 700;
+            line-height: 1.3;
+        }
+
+        .header-title h2 {
+            color: var(--secondary-color);
+            font-size: 1rem;
+            font-weight: 600;
+            margin-top: 5px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Sección principal */
+        main {
+            padding: 40px;
+        }
+
+        .section-header {
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-header h3 {
+            color: var(--secondary-color);
+            font-size: 1.25rem;
+            border-left: 4px solid var(--accent-color);
+            padding-left: 10px;
+        }
+
+        /* Tabla de Integrantes */
+        .table-responsive {
+            width: 100%;
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+            background-color: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        thead {
+            background-color: var(--secondary-color);
+            color: #ffffff;
+        }
+
+        th {
+            padding: 15px 20px;
+            text-align: left;
+            font-size: 0.95rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        td {
+            padding: 16px 20px;
+            border-bottom: 1px solid var(--border-color);
+            font-size: 0.95rem;
+        }
+
+        tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        tbody tr:hover {
+            background-color: #f1f5f9;
+            transition: background 0.2s ease;
+        }
+
+        /* Badges de Roles */
+        .badge-role {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 0.85rem;
+        }
+
+        .role-coord {
+            background-color: #fef3c7;
+            color: #92400e;
+            border: 1px solid rgba(146, 64, 14, 0.3);
+            font-weight: 700;
+        }
+
+        .role-docente {
+            background-color: #eef2ff;
+            color: var(--primary-color);
+            border: 1px solid rgba(139, 0, 0, 0.2);
+        }
+
+        .role-posgrado {
+            background-color: #f3e8ff;
+            color: #6b21a8;
+            border: 1px solid rgba(107, 33, 168, 0.2);
+        }
+
+        .role-apoyo {
+            background-color: #f1f5f9;
+            color: #475569;
+            border: 1px solid rgba(71, 85, 105, 0.2);
+        }
+
+        .date-cell {
+            color: #555;
+            font-size: 0.9rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #f1f3f5;
+            text-align: center;
+            padding: 15px;
+            font-size: 0.85rem;
+            color: #666;
+            border-top: 1px solid var(--border-color);
+        }
+
+        @media (max-width: 650px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+            .header-title {
+                order: 3;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Encabezado con Logos y Título -->
+        <header>
+            <img src="img/UNNE.jpg" alt="Logo UNNE" class="logo">
+            <div class="header-title">
+                <h2>Grupo de Investigación</h2>
+                <h1>Integrantes del Equipo</h1>
+            </div>
+            <img src="img/FACENA.jpg" alt="Logo FaCENA" class="logo">
+        </header>
+
+        <!-- Contenido de Integrantes -->
+        <main>
+            <div class="section-header">
+                <h3>Nómina de Integrantes</h3>
+            </div>
+
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="width: 50px;">#</th>
+                            <th>Integrante</th>
+                            <th style="width: 200px;">Rol en el grupo</th>
+                            <th style="width: 100px; text-align: center;">Alta</th>
+                            <th style="width: 100px; text-align: center;">Baja</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Integrantes Principales (Mariño, Godoy, Castro Chans) -->
+                       
+                        <tr>
+                            <td>2</td>
+                            <td>  (14663513) Godoy Guglielmone, Maria Viviana (Mgter.) </td>
+                            <td><span class="badge-role role-docente">Director PI</span></td>
+                            <td style="text-align: center;" class="date-cell">01/03/2009</td>
+                            <td style="text-align: center;" class="date-cell">-</td>
+                        </tr>
+                       
+			 <tr>
+                            <td>1</td>
+                            <td>(22320737) Mariño, Sonia Itati (Mgter., Dra.)  </td>
+           		    <td><span class="badge-role role-docente">Director PI</span></td>
+                            <td style="text-align: center;" class="date-cell">01/03/2009</td>
+                            <td style="text-align: center;" class="date-cell">-</td>
+                        </tr>
+
+			 <tr>
+                            <td>3</td>
+                            <td>  (17968004) Castro Chans, Norma Beatriz (Mgter., Doctorado en curso) </td>
+                            <td><span class="badge-role role-docente">Director PI</span></td>
+                            <td style="text-align: center;" class="date-cell">01/03/2012</td>
+                            <td style="text-align: center;" class="date-cell">-</td>
+                        </tr>
+
+                        <!-- Resto de integrantes ordenados alfabéticamente por apellido -->
+                        <tr>
+                            <td>4</td>
+                            <td>(28202965) Alderete, Romina Yolanda (Mgter.)</td>
+                            <td><span class="badge-role role-docente">Docente Investigador</span></td>
+                            <td style="text-align: center;" class="date-cell">01/03/2012</td>
+                            <td style="text-align: center;" class="date-cell">-</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>(16928068) Alfonzo, Pedro Luis (Mgter., Doctorado en curso)</td>
+                            <td><span class="badge-role role-docente">Docente Investigador</span></td>
+                            <td style="text-align: center;" class="date-cell">01/03/2012</td>
+                            <td style="text-align: center;" class="date-cell">-</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>(24676242) Arduino, Guillermo Andres (Doctorado en curso)</td>
+                            <td><span class="badge-role role-docente">Docente Investigador</span></td>
+                            <td style="text-align: center;" class="date-cell">01/01/2020</td>
+                            <td style="text-align: center;" class="date-cell">-</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>(27095252) Armana, Silvana Verónica (Maestría en curso)</td>
+                            <td><span class="badge-role role-docente">Docente Investigador</span></td>
+                            <td style="text-align: center;" class="date-cell">01/12/2023</td>
+                            <td style="text-align: center;" class="date-cell">-</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>(21686503) Bercheñi, Viviana Raquel (Mgter., Dra.)</td>
+                            <td><span class="badge-role role-docente">Docente Investigador</span></td>
+                            <td style="text-align: center;" class="date-cell">01/07/2018</td>
+                            <td style="text-align: center;" class="date-cell">-</td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>(29421505) Escalante, Jaquelina Edit (Maestría en curso)</td>
+                            <td><span class="badge-role role-docente">Docente Investigador</span></td>
+                            <td style="text-align: center;" class="date-cell">01/03/2012</td>
+                            <td style="text-align: center;" class="date-cell">-</td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>(31051902) Fernandez, Mirta Gladis (Maestría en curso)</td>
+                            <td><span class="badge-role role-docente">Docente Investigador</span></td>
+                            <td style="text-align: center;" class="date-cell">01/03/2012</td>
+                            <td style="text-align: center;" class="date-cell">-</td>
+                        </tr>
+                        <tr>
+                            <td>11</td>
+                            <td>(29721585) Gomez Solis, Laura Ines</td>
+                            <td><span class="badge-role role-docente">Docente Investigador</span></td>
+                            <td style="text-align: center;" class="date-cell">01/01/2023</td>
+                            <td style="text-align: center;" class="date-cell">-</td>
+                        </tr>
+                        <tr>
+                            <td>12</td>
+                            <td>(17529495) Gronda, Maria Laura (Maestría en curso)</td>
+                            <td><span class="badge-role role-docente">Docente Investigador</span></td>
+                            <td style="text-align: center;" class="date-cell">01/01/2020</td>
+                            <td style="text-align: center;" class="date-cell">-</td>
+                        </tr>
+                        <tr>
+                            <td>13</td>
+                            <td>(24937730) Guastavino Mosna, Maria Lorena (Esp.)</td>
+                            <td><span class="badge-role role-docente">Docente Investigador</span></td>
+                            <td style="text-align: center;" class="date-cell">01/01/2017</td>
+                            <td style="text-align: center;" class="date-cell">-</td>
+                        </tr>
+                        <tr>
+                            <td>14</td>
+                            <td>(22745803) Insaurralde, Paola Elizabeth (Maestría en curso)</td>
+                            <td><span class="badge-role role-docente">Docente Investigador</span></td>
+                            <td style="text-align: center;" class="date-cell">01/01/2022</td>
+                            <td style="text-align: center;" class="date-cell">-</td>
+                        </tr>
+                        <tr>
+                            <td>15</td>
+                            <td>(25876516) Meza, Marta Mabel (Mgter.)</td>
+                            <td><span class="badge-role role-posgrado">Estudiante de posgrado</span></td>
+                            <td style="text-align: center;" class="date-cell">01/01/2022</td>
+                            <td style="text-align: center;" class="date-cell">-</td>
+                        </tr>
+                        <tr>
+                            <td>16</td>
+                            <td>(33038490) Moreiro, Flavia Sabrina</td>
+                            <td><span class="badge-role role-apoyo">Personal de apoyo</span></td>
+                            <td style="text-align: center;" class="date-cell">01/01/2017</td>
+                            <td style="text-align: center;" class="date-cell">-</td>
+                        </tr>
+                        <tr>
+                            <td>17</td>
+                            <td>(29749840) Oviedo, Lucas Ariel</td>
+                            <td><span class="badge-role role-docente">Docente Investigador</span></td>
+                            <td style="text-align: center;" class="date-cell">01/01/2017</td>
+                            <td style="text-align: center;" class="date-cell">31/12/2020</td>
+                        </tr>
+                        <tr>
+                            <td>18</td>
+                            <td>(24304395) Pagnoni, Verónica Karina (Mgter.)</td>
+                            <td><span class="badge-role role-posgrado">Estudiante de posgrado</span></td>
+                            <td style="text-align: center;" class="date-cell">01/12/2023</td>
+                            <td style="text-align: center;" class="date-cell">-</td>
+                        </tr>
+                        <tr>
+                            <td>19</td>
+                            <td>(32438118) Pucheta, Flavia Silvana (Maestría en curso)</td>
+                            <td><span class="badge-role role-docente">Docente Investigador</span></td>
+                            <td style="text-align: center;" class="date-cell">01/01/2025</td>
+                            <td style="text-align: center;" class="date-cell">-</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+
+        <!-- Pie de página -->
+        <footer>
+            Facultad de Ciencias Exactas y Naturales y Agrimensura (FaCENA) &bull; Universidad Nacional del Nordeste (UNNE)
+        </footer>
+    </div>
+
+</body>
+</html>
